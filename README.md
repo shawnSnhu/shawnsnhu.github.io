@@ -1,1 +1,2 @@
-# shawnsnhu.github.io
+# Computer Science ePortfolio
+ePortfolio for CS499
