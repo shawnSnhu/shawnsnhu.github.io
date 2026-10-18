@@ -1,0 +1,134 @@
+[
+  {
+    "animal_id": "DEMO001",
+    "name": "Bay",
+    "animal_type": "Dog",
+    "breed": "Labrador Retriever Mix",
+    "sex_upon_outcome": "Intact Female",
+    "age_upon_outcome_in_weeks": 52,
+    "location_lat": 30.70,
+    "location_long": -97.40,
+    "source": "cs499_sample"
+  },
+  {
+    "animal_id": "DEMO002",
+    "name": "River",
+    "animal_type": "Dog",
+    "breed": "Newfoundland",
+    "sex_upon_outcome": "Intact Female",
+    "age_upon_outcome_in_weeks": 80,
+    "location_lat": 30.71,
+    "location_long": -97.41,
+    "source": "cs499_sample"
+  },
+  {
+    "animal_id": "DEMO003",
+    "name": "Marina",
+    "animal_type": "Dog",
+    "breed": "Chesapeake Bay Retriever",
+    "sex_upon_outcome": "Intact Female",
+    "age_upon_outcome_in_weeks": 100,
+    "location_lat": 30.72,
+    "location_long": -97.42,
+    "source": "cs499_sample"
+  },
+  {
+    "animal_id": "DEMO004",
+    "name": "Scout",
+    "animal_type": "Dog",
+    "breed": "German Shepherd",
+    "sex_upon_outcome": "Intact Male",
+    "age_upon_outcome_in_weeks": 75,
+    "location_lat": 30.73,
+    "location_long": -97.43,
+    "source": "cs499_sample"
+  },
+  {
+    "animal_id": "DEMO005",
+    "name": "Alpine",
+    "animal_type": "Dog",
+    "breed": "Siberian Husky",
+    "sex_upon_outcome": "Intact Male",
+    "age_upon_outcome_in_weeks": 90,
+    "location_lat": 30.74,
+    "location_long": -97.44,
+    "source": "cs499_sample"
+  },
+  {
+    "animal_id": "DEMO006",
+    "name": "Summit",
+    "animal_type": "Dog",
+    "breed": "Alaskan Malamute",
+    "sex_upon_outcome": "Intact Male",
+    "age_upon_outcome_in_weeks": 60,
+    "location_lat": 30.75,
+    "location_long": -97.45,
+    "source": "cs499_sample"
+  },
+  {
+    "animal_id": "DEMO007",
+    "name": "Tracker",
+    "animal_type": "Dog",
+    "breed": "Bloodhound",
+    "sex_upon_outcome": "Intact Male",
+    "age_upon_outcome_in_weeks": 100,
+    "location_lat": 30.76,
+    "location_long": -97.46,
+    "source": "cs499_sample"
+  },
+  {
+    "animal_id": "DEMO008",
+    "name": "Beacon",
+    "animal_type": "Dog",
+    "breed": "Golden Retriever",
+    "sex_upon_outcome": "Intact Male",
+    "age_upon_outcome_in_weeks": 200,
+    "location_lat": 30.77,
+    "location_long": -97.47,
+    "source": "cs499_sample"
+  },
+  {
+    "animal_id": "DEMO009",
+    "name": "Ranger",
+    "animal_type": "Dog",
+    "breed": "Rottweiler",
+    "sex_upon_outcome": "Intact Male",
+    "age_upon_outcome_in_weeks": 180,
+    "location_lat": 30.78,
+    "location_long": -97.48,
+    "source": "cs499_sample"
+  },
+  {
+    "animal_id": "DEMO010",
+    "name": "Pixel",
+    "animal_type": "Cat",
+    "breed": "Domestic Shorthair",
+    "sex_upon_outcome": "Spayed Female",
+    "age_upon_outcome_in_weeks": 48,
+    "location_lat": 30.79,
+    "location_long": -97.49,
+    "source": "cs499_sample"
+  },
+  {
+    "animal_id": "DEMO011",
+    "name": "Copper",
+    "animal_type": "Dog",
+    "breed": "Labrador Retriever Mix",
+    "sex_upon_outcome": "Neutered Male",
+    "age_upon_outcome_in_weeks": 120,
+    "location_lat": 30.80,
+    "location_long": -97.50,
+    "source": "cs499_sample"
+  },
+  {
+    "animal_id": "DEMO012",
+    "name": "Milo",
+    "animal_type": "Dog",
+    "breed": "Beagle Mix",
+    "sex_upon_outcome": "Neutered Male",
+    "age_upon_outcome_in_weeks": 65,
+    "location_lat": 30.81,
+    "location_long": -97.51,
+    "source": "cs499_sample"
+  }
+]

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Algorithms and data structures enhancement for Shawn Bethune's CS 499 capstone.">
+  <title>Algorithms and Data Structures | Shawn Bethune</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Shawn Bethune<span>Computer Science ePortfolio</span></a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="code-review.html">Code Review</a>
+        <a href="software-design.html">Software Design</a>
+        <a href="algorithms.html" aria-current="page">Algorithms</a>
+        <a href="databases.html">Databases</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> / Algorithms and Data Structures</p>
+        <p class="eyebrow">Enhancement Two</p>
+        <h1>Course Planning Application</h1>
+        <p class="lede">A C++ course planner expanded with directed graph modeling, topological sorting, validation, and tests that accept multiple valid course orders.</p>
+        <div class="meta-row" aria-label="Project details">
+          <span>Created December 2025</span>
+          <span>C++</span>
+          <span>Directed graph</span>
+          <span>17 passing checks</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">Before and after</p><h2>From lookup tool to prerequisite-aware planner</h2></div>
+          <p>The original application could sort courses by number. The enhanced version uses prerequisite relationships to produce a valid course order and explain invalid input.</p>
+        </div>
+        <div class="comparison-grid">
+          <article class="comparison-card">
+            <h3>Original version</h3>
+            <ul>
+              <li>Reads course information from a CSV file</li>
+              <li>Stores records in an unordered map</li>
+              <li>Lists courses by course number</li>
+              <li>Searches for a course and displays prerequisites</li>
+            </ul>
+          </article>
+          <article class="comparison-card">
+            <h3>Enhanced version</h3>
+            <ul>
+              <li>Models prerequisites as a directed graph</li>
+              <li>Uses an adjacency list and indegree counts</li>
+              <li>Generates a valid order with Kahn's algorithm</li>
+              <li>Rejects missing, duplicate, malformed, self-referencing, and cyclic data</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <p class="eyebrow">Algorithm flow</p>
+        <div class="flow" aria-label="Course planning algorithm flow">
+          <div class="flow-step">Course CSV</div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step">Validate records</div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step">Build graph</div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step">Topological order</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container prose">
+        <p class="eyebrow">Artifact narrative</p>
+        <h2>Selection and improvement</h2>
+        <p>For this milestone, I enhanced a C++ course planning application that I created in December 2025 for my Data Structures and Algorithms course. The original program read course information from a CSV file and stored the records in an unordered map. Through a menu, a user could load a file, display the course list, or search for a course and view its prerequisites. The list was sorted by course number, which met the original requirements, but it did not create a sequence based on prerequisites.</p>
+        <p>I kept the unordered map for looking up individual courses and added a directed graph for representing the relationships between them. Each course is a vertex, and an edge points from a prerequisite to the course that depends on it. An adjacency list stores the edges, while an indegree count tracks how many prerequisites remain for each course. Kahn's topological sorting algorithm uses those counts to create an order in which prerequisites appear first.</p>
+
+        <h2>Course outcomes and skills</h2>
+        <p>The enhancement demonstrates the use of an appropriate data structure and algorithm while accounting for design trade-offs. Building the graph and generating the course order both take O(V + E) time, where V represents the courses and E represents the prerequisite connections. I chose a regular queue instead of a priority queue because the program only needs a valid course order, and the regular queue preserves the simpler linear runtime.</p>
+        <p class="outcome-note"><strong>Outcome connection:</strong> This work most directly supports Outcome 3 because it applies graph structures, a topological sort, runtime analysis, and an explicit queue trade-off to solve the course-ordering problem.</p>
+
+        <h2>Reflection and trade-offs</h2>
+        <p>The most important thing I learned was how the direction of a graph affects the sorting process. Edges need to point from prerequisites to dependent courses so that completing one course reduces the count for the correct courses. Testing also required a different approach because several valid course orders can exist. Instead of expecting one exact list, the tests confirm that every prerequisite appears before the course that requires it.</p>
+        <p>I considered adding semester planning, credit limits, or database storage. Those features could be useful, but they would move the artifact beyond the algorithms and data structures goal. The instructor described the submitted coding as sound and did not request corrections, so the final revision preserves the algorithm and focuses on clear documentation and presentation.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container file-panel">
+        <div><h2>Artifact files</h2><p>The technical package contains the original and enhanced C++ source, test data, and automated checks.</p></div>
+        <div class="file-actions">
+          <a class="button button-primary" href="downloads/algorithms-artifact.zip">Download the artifact</a>
+          <a class="button button-secondary" href="documents/algorithms-narrative.docx">Download the narrative</a>
+          <a class="button button-secondary" href="https://github.com/shawnSnhu/shawnsnhu.github.io/tree/main/artifacts/algorithms">Browse the source</a>
+        </div>
+      </div>
+      <div class="container next-project"><span>Next artifact</span><a class="button button-light" href="databases.html">Databases →</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-wrap"><p>Shawn Bethune · CS 499 Computer Science Capstone</p><a href="index.html">Return home</a></div></footer>
+</body>
+</html>

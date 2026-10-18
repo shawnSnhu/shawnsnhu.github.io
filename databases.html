@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Database enhancement for Shawn Bethune's CS 499 capstone.">
+  <title>Databases | Shawn Bethune</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Shawn Bethune<span>Computer Science ePortfolio</span></a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="code-review.html">Code Review</a>
+        <a href="software-design.html">Software Design</a>
+        <a href="algorithms.html">Algorithms</a>
+        <a href="databases.html" aria-current="page">Databases</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> / Databases</p>
+        <p class="eyebrow">Enhancement Three</p>
+        <h1>Animal Shelter Dashboard</h1>
+        <p class="lede">A Python, MongoDB, and Dash application improved with database-side sorting, pagination, aggregation, safer configuration, and automated testing.</p>
+        <div class="meta-row" aria-label="Project details">
+          <span>Created June 2026</span>
+          <span>Python</span>
+          <span>MongoDB</span>
+          <span>15 automated tests</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">Before and after</p><h2>Moving work closer to the data</h2></div>
+          <p>The original dashboard worked, but it returned every matching record before sorting and pagination. The enhancement gives MongoDB more responsibility and reduces the work performed in the dashboard.</p>
+        </div>
+        <div class="comparison-grid">
+          <article class="comparison-card">
+            <h3>Original version</h3>
+            <ul>
+              <li>Python CRUD module connected the dashboard to MongoDB</li>
+              <li>Rescue filters returned every matching record</li>
+              <li>Sorting and pagination occurred after retrieval</li>
+              <li>Connection information was stored in the notebook</li>
+            </ul>
+          </article>
+          <article class="comparison-card">
+            <h3>Enhanced version</h3>
+            <ul>
+              <li>MongoDB performs sorting, pagination, and breed aggregation</li>
+              <li>Filter, page, size, field, and direction values are validated</li>
+              <li>Credentials are loaded from environment variables</li>
+              <li>Empty update and delete queries are blocked</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <p class="eyebrow">Data flow</p>
+        <div class="flow" aria-label="Data flow through the enhanced dashboard">
+          <div class="flow-step">Dashboard filter</div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step">Validated query</div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step">MongoDB</div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step">Table, chart, and map</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container prose">
+        <p class="eyebrow">Artifact narrative</p>
+        <h2>Selection and improvement</h2>
+        <p>The artifact is an animal shelter database and dashboard application that I originally created in June 2026 for my Client/Server Development course. The project uses Python, MongoDB, and Dash. A CRUD module connects the application to MongoDB, while the dashboard allows a user to filter animal records by rescue type, view records in a table, see breed distribution, and display a selected animal on a map.</p>
+        <p>I selected this artifact because it was already centered around MongoDB and gave me an opportunity to improve the database operations without changing the application's main purpose. I moved rescue queries into the database module and added server-side sorting and pagination with MongoDB's sort, skip, and limit operations. I also added an aggregation pipeline that counts matching records by breed. A small sample dataset allows the dashboard to be demonstrated without access to the original course database.</p>
+
+        <h2>Course outcomes and security</h2>
+        <p>The enhanced module validates filter names, page values, page sizes, sort fields, and sort directions before running a query. Database connection information is read from environment variables instead of being stored in the notebook. Empty update and delete queries are blocked to reduce the risk of unintended changes to the full collection. The 15 tests cover filtering, sorting, pagination, aggregation, CRUD operations, invalid values, and database configuration.</p>
+        <p class="outcome-note"><strong>Outcome connection:</strong> This work supports Outcome 4 through practical MongoDB operations and automated testing, and Outcome 5 through safer configuration, explicit validation, bounded page sizes, and protection against empty destructive queries.</p>
+
+        <h2>Reflection and trade-offs</h2>
+        <p>Moving sorting, pagination, and breed counts into MongoDB reduced the amount of work performed by the dashboard and helped me better understand how responsibilities should be divided between an application and its database. One challenge was keeping the table, chart, and map consistent when a filter or page changed. The dashboard needed to reset the current page and selected row so each component continued using the same record set.</p>
+        <p>More features could have been added, but I kept the scope focused on database operations, security, and testing. The enhancement improves credential handling and query safety, but it does not add user authentication or authorization. Those controls would be necessary before deploying the dashboard as a public production system. The instructor found the enhancements well placed and did not request technical corrections, so the final revision focuses on documentation, setup clarity, and portfolio presentation.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container file-panel">
+        <div><h2>Artifact files</h2><p>The technical package contains the original and enhanced Python and notebook files, sample data, setup instructions, and tests.</p></div>
+        <div class="file-actions">
+          <a class="button button-primary" href="downloads/database-artifact.zip">Download the artifact</a>
+          <a class="button button-secondary" href="documents/database-narrative.docx">Download the narrative</a>
+          <a class="button button-secondary" href="https://github.com/shawnSnhu/shawnsnhu.github.io/tree/main/artifacts/database">Browse the source</a>
+        </div>
+      </div>
+      <div class="container next-project"><span>Return to the portfolio overview</span><a class="button button-light" href="index.html">Home →</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-wrap"><p>Shawn Bethune · CS 499 Computer Science Capstone</p><a href="index.html">Return home</a></div></footer>
+</body>
+</html>

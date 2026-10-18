@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Software design and engineering enhancement for Shawn Bethune's CS 499 capstone.">
+  <title>Software Design and Engineering | Shawn Bethune</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Shawn Bethune<span>Computer Science ePortfolio</span></a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="code-review.html">Code Review</a>
+        <a href="software-design.html" aria-current="page">Software Design</a>
+        <a href="algorithms.html">Algorithms</a>
+        <a href="databases.html">Databases</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Home</a> / Software Design and Engineering</p>
+        <p class="eyebrow">Enhancement One</p>
+        <h1>Contact Management Service</h1>
+        <p class="lede">A Java contact service rebuilt as a Spring Boot REST application with separate controller, service, repository, and model layers.</p>
+        <div class="meta-row" aria-label="Project details">
+          <span>Created February 2026</span>
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>18 automated tests</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Before and after</p>
+            <h2>How the artifact changed</h2>
+          </div>
+          <p>The original assignment met its testing requirements, but the enhancement turns the same idea into a more complete service while keeping the repository intentionally in memory.</p>
+        </div>
+        <div class="comparison-grid">
+          <article class="comparison-card">
+            <h3>Original version</h3>
+            <ul>
+              <li>A few Java classes centered on a HashMap</li>
+              <li>Add, update, and delete operations</li>
+              <li>JUnit tests for assignment requirements</li>
+              <li>No external interface for interacting with the service</li>
+            </ul>
+          </article>
+          <article class="comparison-card">
+            <h3>Enhanced version</h3>
+            <ul>
+              <li>Spring Boot REST endpoints for complete CRUD operations</li>
+              <li>Separate controller, service, repository, and model layers</li>
+              <li>Centralized error responses and stronger validation</li>
+              <li>Model, repository, service, and REST-level testing</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <p class="eyebrow">Application flow</p>
+        <div class="flow" aria-label="Request flow through the enhanced application">
+          <div class="flow-step">REST request</div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step">Controller</div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step">Service</div><span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step">Repository</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container prose">
+        <p class="eyebrow">Artifact narrative</p>
+        <h2>Selection and improvement</h2>
+        <p>The artifact is a contact management service that I originally created in my Software Testing, Automation, and Quality Assurance course in February 2026. The Java program stored contacts in a HashMap and allowed a contact to be added, updated, or deleted. JUnit tests were also included for the assignment requirements. At the time, the program contained only a few classes and did not have an external interface for interacting with it. I saw an opportunity to build on the service without starting over.</p>
+        <p>I rebuilt the artifact as a Spring Boot REST service. The enhanced version separates the controller, service, repository, and model responsibilities. It supports creating, listing, retrieving, updating, and deleting contacts through REST endpoints. Tests are included at the model, repository, service, and REST levels. Phone numbers must contain exactly 10 digits, and contact IDs are limited to characters that are safe to use in URLs. Those issues did not prevent the original assignment from working, but the code review highlighted them as areas that should be improved.</p>
+
+        <h2>Course outcomes and skills</h2>
+        <p>This enhancement demonstrates my use of Java, Spring Boot, Maven, REST, and automated testing to turn a small program into a more complete working service. Separating the controller, service, and repository layers also makes the program easier to understand and maintain. The 18 tests check duplicate IDs, missing contacts, invalid inputs, failed updates, and expected API behavior.</p>
+        <p class="outcome-note"><strong>Outcome connection:</strong> This work most directly supports Outcome 4 through the use of established tools and layered software design. Its validation and error handling also contribute to the security mindset described in Outcome 5.</p>
+
+        <h2>Reflection and trade-offs</h2>
+        <p>Working through the enhancement helped me understand why application structure matters once a program grows beyond a few classes. Separating the repository from the service required more setup, but it made each responsibility easier to follow. Testing across layers also provided more insight into the full system than testing individual methods alone.</p>
+        <p>One design choice was whether to keep the repository in memory or add persistent database storage. Persistence would have introduced more components that needed to be developed and tested. I kept the in-memory repository because it allowed the enhancement to remain focused on application structure and software design.</p>
+        <p>The instructor feedback did not identify any required technical corrections, so I retained the submitted enhancement and focused the final revision on documentation, consistency, and portfolio presentation.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container file-panel">
+        <div>
+          <h2>Artifact files</h2>
+          <p>The technical package contains both the original and enhanced source code. The narrative is also available as a Word document.</p>
+        </div>
+        <div class="file-actions">
+          <a class="button button-primary" href="downloads/software-design-artifact.zip">Download the artifact</a>
+          <a class="button button-secondary" href="documents/software-design-narrative.docx">Download the narrative</a>
+          <a class="button button-secondary" href="https://github.com/shawnSnhu/shawnsnhu.github.io/tree/main/artifacts/software-design">Browse the source</a>
+        </div>
+      </div>
+      <div class="container next-project">
+        <span>Next artifact</span>
+        <a class="button button-light" href="algorithms.html">Algorithms and Data Structures →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-wrap"><p>Shawn Bethune · CS 499 Computer Science Capstone</p><a href="index.html">Return home</a></div></footer>
+</body>
+</html>
