@@ -57,12 +57,30 @@
             <h2>Professional Self-Assessment</h2>
           </div>
           <div>
-            <p>Throughout the Computer Science program, I have learned how software design, algorithms, databases, testing, communication, and security work together. The projects in this portfolio show how I can return to earlier work, identify limitations, and make focused improvements without losing sight of the original purpose.</p>
+            <p>This assessment connects my coursework, current cloud engineering experience, and portfolio artifacts to my goal of becoming a systems developer.</p>
           </div>
         </div>
-        <div class="draft-note"><strong>Draft status:</strong> The complete professional self-assessment will be added during the final writing session. This note will be removed before publication.</div>
         <div class="prose">
-          <p>My professional goal is to continue expanding my skills in my current position and work toward becoming a systems developer. The three artifacts below demonstrate growth across different areas of computer science while also showing a consistent focus on maintainability, validation, testing, and practical design choices.</p>
+          <p>I started the Computer Science program in September 2018, although my enrollment was not continuous during the earlier years. I took a break after my first term but returned in January 2020. At different points, I attended part time or had to take additional breaks. During the past two years, I became more determined on finishing the program and stayed consistent with my coursework. While completing the program, I also moved professionally from systems administration into cloud engineering. My previous experience gave me a background in infrastructure, troubleshooting, and system operations, while the program helped me improve my programming, database, testing, security, and problem-solving skills. My current goal is to continue growing in my position and eventually work as a systems developer.</p>
+
+          <p>One thing I have learned is that technical work does not stop after the code is written. In my current position, I work with software engineers and was selected for a left-seat/right-seat pilot program. Early in the program, I worked on a test calculator that originally only supported addition and subtraction. I added multiplication and division, tested the changes, created a code review, sent it for approval, and merged it through the deployment pipeline into my test environment. This was a small code change, but it gave me experience with the complete development process.</p>
+
+          <p>I also had the opportunity to shadow a professional code review. This helped me see how testing, checklists, and feedback allow a team to catch problems and make decisions before deploying a change. Creating my own code-review video gave me practice explaining technical work to an audience of peers. The narratives, README files, and ePortfolio also required me to present information in written and visual formats. Combined, these assignments helped me become more comfortable explaining what to change and why those changes could be made.</p>
+
+          <p>Communication has also been important in my current position. A recent example involved trouble reaching servers that hosted my team’s code and were placed behind load balancers. Some servers were reachable, but others were not. After troubleshooting the issue, it was determined that the permitted IP range on the load balancers needed to be expanded. Once that change was made, the servers became responsive. The investigation was more involved, but I was able to give my manager the important information without including every troubleshooting step.</p>
+
+          <p>My coursework improved how I break larger problems into smaller tasks and test my work as I go. One example outside of my artifacts is from my CS 330 Computational Graphics and Visualization course. This was my first time using OpenGL and working with code to manipulate graphics. I modified a C++ project to create a tabletop scene using basic 3D shapes, including a coffee cup, saucer, donut, drinking glass, and a notebook. Adjusting the shapes, textures, lighting, and camera view taught me how to build a larger result from smaller pieces. Reusing the same transformation and material functions also made the program easier to manage.</p>
+
+          <p>The three artifacts in this portfolio demonstrate growth in the main technical areas of the program. For software design and engineering, I rebuilt a small Java contact management program as a layered Spring Boot REST service. This made the program easier to maintain and test. For algorithms and data structures, I added a directed graph and topological sorting to a C++ course planner so it could create a valid order based on course prerequisites. Doing this required me to think about efficiency, testing, and tradeoffs between different solutions. For databases, I enhanced a Python and MongoDB animal shelter dashboard by moving filtering, sorting, pagination, and aggregation into the database layer.</p>
+
+          <p>Security was considered throughout the enhancements. The projects use input validation, automated testing, safer configuration, and controls that reduce unintended changes. In the database artifact, credentials were removed from the original code, query values were validated, and empty update and delete requests were blocked. Publishing the ePortfolio also prompted me to check that the files did not contain hardcoded passwords or sensitive information that should not be public. These experiences helped me understand why security should be part of the development process instead of something to add at the end.</p>
+
+          <p>Together, the artifacts show the areas I want to continue developing. The contact service demonstrates software structure and testing, the course planner demonstrates algorithm and data-structure design, and the animal shelter dashboard demonstrates database operations and secure data handling. Even though different languages and tools were used throughout, all three focus on improving an existing solution without adding unnecessary features.</p>
+
+          <p>Completing the program and assembling this portfolio helped me see how my operations experience can connect with software development growth. It also gives me working examples that demonstrate my skills to employers and reflects the value I place on reliability, security, and clear communication. I think this portfolio shows that I can review an existing solution, identify limitations, make improvements on those limitations, test the results, and explain my decisions. Having these skills will help me continue working towards becoming a systems developer who understands both the software being built and the environment where it will run.</p>
+        </div>
+        <div class="actions">
+          <a class="button button-light" href="documents/professional-self-assessment.docx" download>Download the self-assessment (Word)</a>
         </div>
       </div>
     </section>
@@ -129,7 +147,7 @@
             <p class="eyebrow">Program outcomes</p>
             <h2>Evidence across the portfolio</h2>
           </div>
-          <p>The portfolio connects the completed work to all five Computer Science program outcomes. The final self-assessment will explain these connections in more detail.</p>
+          <p>The portfolio connects the completed work to all five Computer Science program outcomes. The self-assessment above introduces those connections, while the artifacts provide the supporting technical evidence.</p>
         </div>
         <div class="outcome-grid">
           <article class="outcome-card"><span>Outcome 1</span><p>Collaboration, code-review practices, documentation, and design decisions for technical audiences.</p></article>

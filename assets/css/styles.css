@@ -1,11 +1,11 @@
 :root {
-  --navy-950: #081b2c;
-  --navy-900: #0d2940;
-  --navy-800: #163b56;
-  --teal-700: #0b6d72;
-  --teal-600: #0d7f83;
-  --teal-100: #dff2f1;
-  --gold-500: #d9a441;
+  --navy-950: #00182f;
+  --navy-900: #00244e;
+  --navy-800: #06477a;
+  --teal-700: #006c9e;
+  --teal-600: #009dea;
+  --teal-100: #e3f4fb;
+  --gold-500: #fdb913;
   --gold-700: #8a5a00;
   --slate-700: #354657;
   --slate-600: #526475;
@@ -14,7 +14,7 @@
   --slate-100: #f1f5f8;
   --paper: #fbfcfd;
   --white: #ffffff;
-  --shadow: 0 16px 40px rgba(8, 27, 44, 0.1);
+  --shadow: 0 16px 40px rgba(0, 36, 78, 0.1);
   --radius-lg: 22px;
   --radius-md: 14px;
   --content-width: 1120px;
@@ -166,7 +166,7 @@ p {
   padding: clamp(4rem, 9vw, 7rem) 0;
   color: var(--white);
   background:
-    radial-gradient(circle at 84% 18%, rgba(13, 127, 131, 0.65), transparent 31rem),
+    radial-gradient(circle at 84% 18%, rgba(0, 157, 234, 0.48), transparent 31rem),
     linear-gradient(135deg, var(--navy-950), var(--navy-800));
 }
 
@@ -239,7 +239,7 @@ p {
 
 .button-primary:hover {
   color: var(--navy-950);
-  background: #e8b85a;
+  background: #ffca3a;
 }
 
 .button-secondary {
@@ -449,7 +449,7 @@ p {
   padding: 4rem 0 3.3rem;
   color: var(--white);
   background:
-    radial-gradient(circle at 84% 15%, rgba(13, 127, 131, 0.54), transparent 26rem),
+    radial-gradient(circle at 84% 15%, rgba(0, 157, 234, 0.42), transparent 26rem),
     linear-gradient(135deg, var(--navy-950), var(--navy-800));
 }
 
@@ -639,7 +639,7 @@ p {
 }
 
 .site-footer a {
-  color: #b8e5e3;
+  color: #bfe8fb;
 }
 
 @media (max-width: 900px) {
