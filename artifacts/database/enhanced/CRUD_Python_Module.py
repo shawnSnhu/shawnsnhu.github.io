@@ -11,6 +11,7 @@ class AnimalShelter:
 
     MAX_PAGE_SIZE = 100
 
+    # Named filters prevent dashboard input from becoming arbitrary MongoDB queries.
     FILTER_QUERIES = {
         "reset": {},
         "water": {
@@ -55,6 +56,7 @@ class AnimalShelter:
         },
     }
 
+    # Only fields displayed by the dashboard may be used for server-side sorting.
     SORT_FIELDS = {
         "animal_id",
         "animal_type",
@@ -96,6 +98,7 @@ class AnimalShelter:
         return list(self.collection.find(query, projection))
 
     def update(self, query, new_values):
+        # Empty filters are blocked so an accidental request cannot update every record.
         if not isinstance(query, dict) or not query:
             raise ValueError("An update query cannot be empty")
         if not isinstance(new_values, dict) or not new_values:
@@ -104,6 +107,7 @@ class AnimalShelter:
         return result.modified_count
 
     def delete(self, query):
+        # Deleting the entire collection requires an explicit filter, not an empty query.
         if not isinstance(query, dict) or not query:
             raise ValueError("A delete query cannot be empty")
         result = self.collection.delete_many(query)
@@ -130,6 +134,7 @@ class AnimalShelter:
         total_count = self.collection.count_documents(query)
         records_to_skip = page * page_size
 
+        # MongoDB sorts and limits the result before records reach the dashboard.
         cursor = (
             self.collection.find(query, {"_id": 0})
             .sort(sort_field, sort_direction)
@@ -171,6 +176,7 @@ class AnimalShelter:
     def _validate_page(cls, page, page_size):
         if isinstance(page, bool) or not isinstance(page, int) or page < 0:
             raise ValueError("Page must be a nonnegative integer")
+        # The upper bound prevents a single dashboard request from returning too much data.
         if (
             isinstance(page_size, bool)
             or not isinstance(page_size, int)

@@ -197,6 +197,7 @@ SortResult generateCourseOrder(const CourseGraph& graph) {
         graph.indegree;
     std::queue<std::string> readyCourses;
 
+    // Kahn's algorithm begins with courses that have no remaining prerequisites.
     for (const auto& entry : remainingIndegree) {
         if (entry.second == 0) {
             readyCourses.push(entry.first);
@@ -214,6 +215,7 @@ SortResult generateCourseOrder(const CourseGraph& graph) {
         }
 
         for (const std::string& dependent : dependentEntry->second) {
+            // Removing a completed prerequisite may make a dependent course ready.
             std::size_t& count = remainingIndegree.at(dependent);
             --count;
 

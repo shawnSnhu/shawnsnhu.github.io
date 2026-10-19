@@ -29,6 +29,7 @@ def main():
         if not animal_id:
             raise ValueError("Every sample record must contain an animal_id")
 
+        # Upsert by animal_id makes the loader safe to run again without duplicates.
         result = collection.replace_one(
             {"animal_id": animal_id},
             animal,

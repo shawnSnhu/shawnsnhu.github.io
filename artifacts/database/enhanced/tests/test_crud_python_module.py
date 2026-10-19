@@ -115,6 +115,7 @@ class AnimalShelterTest(unittest.TestCase):
         )
         return [record["animal_id"] for record in result["records"]]
 
+    # Rescue-filter tests verify that the predefined database queries select correctly.
     def test_water_filter(self):
         self.assertEqual(["A001", "A002"], self.ids_for_filter("water"))
 
@@ -135,6 +136,7 @@ class AnimalShelterTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.shelter.search_animals(filter_type="$where")
 
+    # Paging and sorting tests check the database-side operations used by the table.
     def test_pagination_returns_the_requested_page(self):
         first = self.shelter.search_animals(page=0, page_size=3)
         second = self.shelter.search_animals(page=1, page_size=3)
@@ -177,6 +179,7 @@ class AnimalShelterTest(unittest.TestCase):
             counts[:2],
         )
 
+    # CRUD security tests confirm ordinary changes work while mass changes are blocked.
     def test_basic_crud_operations(self):
         new_animal = {
             "animal_id": "A010",
@@ -197,6 +200,7 @@ class AnimalShelterTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.shelter.delete({})
 
+    # Configuration tests keep real credentials and live MongoDB connections out of the suite.
     @patch.dict(os.environ, {}, clear=True)
     def test_connection_requires_environment_uri(self):
         with self.assertRaises(ValueError):

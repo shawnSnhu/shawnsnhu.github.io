@@ -23,6 +23,7 @@ public final class Contact {
     }
 
     public static String validateContactId(String contactId) {
+        // IDs are used in REST paths, so only URL-safe characters are accepted.
         if (contactId == null || !contactId.matches("[A-Za-z0-9_-]{1,10}")) {
             throw new ContactValidationException(
                     "Contact ID must contain 1 to 10 letters, numbers, underscores, or hyphens");

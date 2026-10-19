@@ -37,6 +37,7 @@ bool prerequisitesComeFirst(const CourseTable& courseTable,
         return false;
     }
 
+    // Compare relative positions because more than one valid course order can exist.
     std::unordered_map<std::string, std::size_t> position;
     for (std::size_t index = 0; index < courseOrder.size(); ++index) {
         if (!position.emplace(courseOrder[index], index).second) {
@@ -169,6 +170,7 @@ void testFailedReloadPreservesData(TestRunner& tests) {
                                  errorMessage);
     std::size_t originalSize = courses.size();
 
+    // Failed input must not replace the last dataset that loaded successfully.
     bool secondLoad = loadCourses("test_data/does_not_exist.csv",
                                   courses,
                                   errorMessage);

@@ -24,6 +24,7 @@ public class InMemoryContactRepository implements ContactRepository {
 
     @Override
     public List<Contact> findAll() {
+        // Return a sorted snapshot instead of exposing the concurrent map itself.
         return contacts.values().stream()
                 .sorted(Comparator.comparing(Contact::getContactId))
                 .toList();

@@ -15,6 +15,7 @@ class ContactControllerIntegrationTest {
     @Autowired
     private RestTestClient client;
 
+    // This flow verifies the controller, service, repository, and HTTP responses together.
     @Test
     void restEndpointsSupportCompleteCrudFlow() {
         client.post().uri("/api/contacts")
@@ -92,6 +93,7 @@ class ContactControllerIntegrationTest {
                 .expectStatus().isCreated()
                 .expectBody();
 
+        // A failed request must be rejected before it can partially change stored data.
         client.put().uri("/api/contacts/REST3")
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(new UpdateContactRequest(
